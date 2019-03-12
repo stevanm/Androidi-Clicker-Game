@@ -9,4 +9,5 @@ We will use Kotlin programming language for implementation.
 
 ## Team members
 Stevan Milic, stevanmilic@gamil.com
+
 Ivan Nedic, nedicivan.nedic@gmail.com
