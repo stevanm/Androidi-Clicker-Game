@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FunnyClicker</string>
+    <string name="Click_string">CLICK</string>
 </resources>
