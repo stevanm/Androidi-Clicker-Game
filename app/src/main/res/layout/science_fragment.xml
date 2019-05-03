@@ -1,11 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <TextView
-            android:text="sciences"
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="355dp"
-            tools:layout_editor_absoluteX="176dp" android:id="@+id/textView7"/>
-</android.support.constraint.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default">
+
+        <ImageButton
+                android:id="@+id/image01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="203dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="23dp"
+                android:layout_below="@+id/image01"/>
+
+        <ImageButton
+                android:id="@+id/image03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-24dp"
+                android:layout_below="@+id/image02" android:layout_alignParentEnd="true" android:layout_marginEnd="151dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="7dp"
+                android:layout_below="@+id/image03" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-9dp"
+                android:layout_below="@+id/image04" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="281dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="14dp"
+                android:layout_below="@+id/image05" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="214dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="5dp"
+                android:layout_below="@+id/image06" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="102dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="8dp"
+                android:layout_below="@+id/image07" android:layout_alignParentEnd="true" android:layout_marginEnd="304dp"
+                android:background="@color/colorAccent"/>
+
+
+        <ImageButton
+                android:id="@+id/image09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-11dp"
+                android:layout_below="@+id/image08" android:layout_alignParentEnd="true" android:layout_marginEnd="26dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-2dp"
+                android:layout_below="@+id/image09" android:layout_alignParentEnd="true" android:layout_marginEnd="159dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="13dp"
+                android:layout_below="@+id/image10" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="349dp"
+                android:background="@color/colorAccent"/>
+
+        <ImageButton
+                android:id="@+id/image12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-3dp"
+                android:layout_below="@+id/image11" android:layout_alignParentEnd="true" android:layout_marginEnd="62dp"
+                android:background="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_default"/>
+
+</LinearLayout>
