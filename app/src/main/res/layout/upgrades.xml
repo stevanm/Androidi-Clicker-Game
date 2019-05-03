@@ -9,8 +9,9 @@
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="355dp"
             tools:layout_editor_absoluteX="176dp" android:id="@+id/textView7"/>
     <ImageButton
-            android:layout_width="49dp"
-            android:layout_height="55dp" app:srcCompat="@android:drawable/radiobutton_on_background"
+            android:layout_width="190dp"
+            android:layout_height="117dp"
+            android:src="@drawable/ic_wheel"
             android:id="@+id/imageButtonWheel"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="144dp" app:layout_constraintStart_toStartOf="parent"

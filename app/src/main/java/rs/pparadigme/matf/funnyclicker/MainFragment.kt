@@ -8,11 +8,15 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment(){
     val TAG = "Mainfragment"
+
+    var mFoodVal:TextView? = null
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
@@ -29,12 +33,19 @@ class MainFragment : Fragment(){
         return inflater!!.inflate(R.layout.main_fragment, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //mFoodVal?.setText(foodAm)
+
+        activity?.findViewById<TextView>(R.id.FoodVal)?.setText(""+ foodAm)
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Log.d(TAG, "onActivityCreated")
         super.onActivityCreated(savedInstanceState)
     }
 
     override fun onStart() {
+
         Log.d(TAG, "onStart")
         super.onStart()
 
@@ -45,6 +56,8 @@ class MainFragment : Fragment(){
             else {
                 foodAm = foodCap
             }
+
+            Toast.makeText(activity, "+1 click", Toast.LENGTH_SHORT).show()
         }
         MakeScience.setOnClickListener {
             scienceAm += scienceCl

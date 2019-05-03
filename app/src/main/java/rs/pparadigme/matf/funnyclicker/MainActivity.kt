@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v4.os.HandlerCompat.postDelayed
+import android.widget.TextView
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainActivity : AppCompatActivity() {
@@ -36,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         upgradeButton.setOnClickListener {
             onClickUpgrades()
         }
-
         val handler = Handler()
         val delay = 1000 //milliseconds
 
@@ -51,10 +51,9 @@ class MainActivity : AppCompatActivity() {
                 foodString = " Food:"+ foodAm +"/"+ foodCap
                 peopleString = "People:" + peopleAm +"/"+ peopleCap
                 Statistic.setText( peopleString + foodString + scienceString)
-
-                //Somehow these aren't updated on the MainFragment
-                ScienceVal.setText(scienceString)
-                FoodVal.setText(""+ foodAm+"/"+ foodCap)
+                
+                findViewById<TextView>(R.id.FoodVal)?.setText(foodString)
+                findViewById<TextView>(R.id.ScienceVal)?.setText(scienceString)
             }
         }, delay.toLong())
     }
