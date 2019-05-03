@@ -1,14 +1,16 @@
-package rs.pparadigme.matf.funnyclicker
+package rs.pparadigme.matf.funnyclicker.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.Fragment
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import android.support.v4.os.HandlerCompat.postDelayed
 import android.widget.TextView
-import kotlinx.android.synthetic.main.main_fragment.*
+import rs.pparadigme.matf.funnyclicker.*
+import rs.pparadigme.matf.funnyclicker.fragments.MainFragment
+import rs.pparadigme.matf.funnyclicker.fragments.ResourcesFragment
+import rs.pparadigme.matf.funnyclicker.fragments.ScienceFragment
+import rs.pparadigme.matf.funnyclicker.fragments.UpgradesFragment
 
 class MainActivity : AppCompatActivity() {
     enum class Fragments {
@@ -44,16 +46,17 @@ class MainActivity : AppCompatActivity() {
             override fun run() {
                 globalCounter++
                 handler.postDelayed(this, delay.toLong())
-                textView2.setText("Ticks: " + globalCounter)
+                counter.setText("Ticks: " + globalCounter)
                 stringTest = stringTest +globalCounter
                 Calculate()
-                scienceString =" Science:"+ ((scienceAm * 1000).toInt())/1000.0
-                foodString = " Food:"+ foodAm +"/"+ foodCap
-                peopleString = "People:" + peopleAm +"/"+ peopleCap
-                Statistic.setText( peopleString + foodString + scienceString)
-                
+                //scienceString =" ScienceFragment:"+ ((scienceAm * 1000).toInt())/1000.0
+                foodString = " Food: "+ foodAm +"/"+ foodCap
+                peopleString = "People: " + peopleAm +"/"+ peopleCap
+                //statistic.setText( peopleString + foodString + scienceString)
+                statistic.setText( peopleString + foodString)
+
                 findViewById<TextView>(R.id.FoodVal)?.setText(foodString)
-                findViewById<TextView>(R.id.ScienceVal)?.setText(scienceString)
+                findViewById<TextView>(R.id.scienceVal)?.setText(scienceString)
             }
         }, delay.toLong())
     }
@@ -76,7 +79,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun ShowScienceFragment (){
         val transaction = manager.beginTransaction()
-        val fragment = Science()
+        val fragment = ScienceFragment()
         transaction.replace(R.id.fragment_holder, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
@@ -84,7 +87,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun ShowResourcesFragment (){
         val transaction = manager.beginTransaction()
-        val fragment = Resources()
+        val fragment = ResourcesFragment()
         transaction.replace(R.id.fragment_holder, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
@@ -92,7 +95,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun ShowUpgradesFragment (){
         val transaction = manager.beginTransaction()
-        val fragment = Upgrades()
+        val fragment = UpgradesFragment()
         transaction.replace(R.id.fragment_holder, fragment)
         transaction.addToBackStack(null)
         transaction.commit()

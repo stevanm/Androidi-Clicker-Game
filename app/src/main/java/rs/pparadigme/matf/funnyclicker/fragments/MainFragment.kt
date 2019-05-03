@@ -1,4 +1,4 @@
-package rs.pparadigme.matf.funnyclicker
+package rs.pparadigme.matf.funnyclicker.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,15 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.main_fragment.*
+import rs.pparadigme.matf.funnyclicker.*
 
-class Science : Fragment(){
-    val TAG = "Science"
+class MainFragment : Fragment(){
+    val TAG = "Mainfragment"
+
+    var mFoodVal:TextView? = null
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
@@ -23,7 +29,13 @@ class Science : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
-        return inflater!!.inflate(R.layout.science, container, false)
+        return inflater!!.inflate(R.layout.main_fragment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //mFoodVal?.setText(foodAm)
+
+        activity?.findViewById<TextView>(R.id.FoodVal)?.setText(""+ foodAm)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -32,8 +44,24 @@ class Science : Fragment(){
     }
 
     override fun onStart() {
+
         Log.d(TAG, "onStart")
         super.onStart()
+
+        makeFood.setOnClickListener {
+            if (foodAm + foodCl <= foodCap){
+                foodAm += foodCl
+            }
+            else {
+                foodAm = foodCap
+            }
+
+            Toast.makeText(activity, "+1 click", Toast.LENGTH_SHORT).show()
+        }
+        makeScience.setOnClickListener {
+            scienceAm += scienceCl
+        }
+
     }
 
     override fun onResume() {

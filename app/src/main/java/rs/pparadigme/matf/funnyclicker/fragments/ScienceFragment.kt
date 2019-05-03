@@ -1,4 +1,4 @@
-package rs.pparadigme.matf.funnyclicker
+package rs.pparadigme.matf.funnyclicker.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import rs.pparadigme.matf.funnyclicker.R
 
-class Resources : Fragment(){
-    val TAG = "Resources"
+class ScienceFragment : Fragment(){
+    val TAG = "ScienceFragment"
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
@@ -23,7 +24,7 @@ class Resources : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
-        return inflater!!.inflate(R.layout.resources, container, false)
+        return inflater!!.inflate(R.layout.science_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
