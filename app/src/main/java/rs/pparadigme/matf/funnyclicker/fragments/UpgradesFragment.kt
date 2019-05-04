@@ -7,13 +7,19 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import kotlinx.android.synthetic.main.upgrades_fragment.*
 import rs.pparadigme.matf.funnyclicker.R
+import rs.pparadigme.matf.funnyclicker.adapters.ItemAdapter
 import rs.pparadigme.matf.funnyclicker.foodAm
 import rs.pparadigme.matf.funnyclicker.foodPerSec
+import rs.pparadigme.matf.funnyclicker.utils.Item
 
 class UpgradesFragment : Fragment(){
     val TAG = "UpgradesFragment"
+
+    var adapter: ItemAdapter? = null
+    var itemsList = ArrayList<Item>()
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
@@ -36,6 +42,24 @@ class UpgradesFragment : Fragment(){
         return inflater!!.inflate(R.layout.upgrades_fragment, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        /* load items - images */
+        itemsList.add(Item("Name 1", R.drawable.ic_wheel))
+        itemsList.add(Item("Name 2", R.drawable.ic_wheel))
+        itemsList.add(Item("Name 3", R.drawable.ic_wheel))
+        itemsList.add(Item("Name 4", R.drawable.ic_wheel))
+        itemsList.add(Item("Name 5", R.drawable.ic_wheel))
+
+        adapter = ItemAdapter(activity!!.applicationContext, itemsList)
+        gvImages.adapter = adapter
+
+        gvImages.setOnItemClickListener { parent, view, position, id ->
+            Toast.makeText(activity!!.applicationContext, "Clicked on position " + position, Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Log.d(TAG, "onActivityCreated")
         super.onActivityCreated(savedInstanceState)
@@ -45,10 +69,11 @@ class UpgradesFragment : Fragment(){
         Log.d(TAG, "onStart")
         super.onStart()
 
+/*
         imageButtonWheel.setOnClickListener {
             onWheelClick()
         }
-
+*/
         buttonBuyUpgrade.setOnClickListener {
             if (foodAm > 30){
                 foodAm -= 30
@@ -89,4 +114,5 @@ class UpgradesFragment : Fragment(){
         Log.d(TAG, "onDetach")
         super.onDetach()
     }
+
 }

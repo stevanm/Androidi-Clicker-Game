@@ -1,54 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <ImageButton
+                android:layout_width="190dp"
+                android:layout_height="117dp"
+                android:src="@drawable/ic_wheel"
+                android:id="@+id/imageButtonWheel"/>
+
+        <TextView
+                android:text="Wheel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"/>
+
+    </LinearLayout>
+    -->
+
+
+    <GridView
+            android:id="@+id/gvImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="5dp"
+            android:numColumns="5"
+            android:verticalSpacing="5dp"/>
+
+
+    <Button
+            android:id="@+id/buttonBuyUpgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Buy"
+            android:textAllCaps="false"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <TextView
+                android:id="@+id/textUpgradeCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost: "/>
+
+        <TextView
+                android:id="@+id/textUpgradeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xxxx"/>
+
+    </LinearLayout>
 
     <TextView
-            android:text="upgrades"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="355dp"
-            tools:layout_editor_absoluteX="176dp" android:id="@+id/textView7"/>
-    <ImageButton
-            android:layout_width="190dp"
-            android:layout_height="117dp"
-            android:src="@drawable/ic_wheel"
-            android:id="@+id/imageButtonWheel"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="144dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="68dp"/>
-    <TextView
-            android:text="Wheel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonWheel"
-            app:layout_constraintStart_toStartOf="@+id/imageButtonWheel"
-            app:layout_constraintEnd_toEndOf="@+id/imageButtonWheel"/>
-    <Button
-            android:text="Buy"
+            android:id="@+id/textUpgradeInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonBuyUpgrade"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="473dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="243dp"/>
-    <TextView
-            android:text="Cost:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textUpgradeCost" android:layout_marginTop="33dp"
-            app:layout_constraintTop_toBottomOf="@+id/buttonBuyUpgrade" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="243dp"/>
-    <TextView
             android:text="Nothing selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textUpgradeInfo" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="38dp" android:layout_marginTop="414dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView"/>
+            android:textAllCaps="false"/>
+
     <TextView
-            android:text="0"
+            android:id="@+id/textUpgradeCostAm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textUpgradeCostAm" app:layout_constraintStart_toEndOf="@+id/textUpgradeCost"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/buttonBuyUpgrade"/>
-</android.support.constraint.ConstraintLayout>
+            android:text="Xxx"
+            android:textAllCaps="false"/>
+
+</LinearLayout>

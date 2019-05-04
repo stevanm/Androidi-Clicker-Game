@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 stringTest = stringTest +globalCounter
                 Calculate()
                 //scienceString =" ScienceFragment:"+ ((scienceAm * 1000).toInt())/1000.0
-                foodString = " Food: "+ foodAm +"/"+ foodCap
+                foodString = " Item: "+ foodAm +"/"+ foodCap
                 peopleString = "People: " + peopleAm +"/"+ peopleCap
                 //statistic.setText( peopleString + foodString + scienceString)
                 statistic.setText( peopleString + foodString)
