@@ -8,6 +8,6 @@ The game should be available on Android mobile platform.
 We will use Kotlin programming language for implementation.
 
 ## Team members
-Stevan Milic, stevanmilic@gamil.com
+Stevan Milic, stevanmilic@gmail.com
 
 Ivan Nedic, nedicivan.nedic@gmail.com
