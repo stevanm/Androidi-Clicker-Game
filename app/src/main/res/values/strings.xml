@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FunnyClicker</string>
+    <string name="app_name">FunnyClicker Game</string>
 
     <string name="menu_restart_game">Restart Game</string>
     <string name="menu_continue_game">Continue Game</string>
