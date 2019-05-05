@@ -16,7 +16,8 @@ import rs.pparadigme.matf.funnyclicker.foodPerSec
 import rs.pparadigme.matf.funnyclicker.utils.Item
 
 class UpgradesFragment : Fragment(){
-    val TAG = "UpgradesFragment"
+
+    val TAG:String = this.javaClass.toString()
 
     var adapter: ItemAdapter? = null
     var itemsList = ArrayList<Item>()

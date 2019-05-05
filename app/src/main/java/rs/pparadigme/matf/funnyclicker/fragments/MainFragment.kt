@@ -13,7 +13,8 @@ import kotlinx.android.synthetic.main.main_fragment.*
 import rs.pparadigme.matf.funnyclicker.*
 
 class MainFragment : Fragment(){
-    val TAG = "Mainfragment"
+
+    val TAG:String = this.javaClass.toString()
 
     var mFoodVal:TextView? = null
 

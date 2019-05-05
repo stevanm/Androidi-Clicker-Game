@@ -10,7 +10,8 @@ import android.view.ViewGroup
 import rs.pparadigme.matf.funnyclicker.R
 
 class ResourcesFragment : Fragment(){
-    val TAG = "ResourcesFragment"
+
+    val TAG:String = this.javaClass.toString()
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")

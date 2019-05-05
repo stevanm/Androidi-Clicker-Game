@@ -11,6 +11,9 @@ import rs.pparadigme.matf.funnyclicker.utils.Item
 
 
 class ItemAdapter : BaseAdapter {
+
+    val TAG:String = this.javaClass.toString()
+
     var itemsList = ArrayList<Item>()
     var context: Context? = null
 

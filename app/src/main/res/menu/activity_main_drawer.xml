@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <item
+            android:id="@+id/nav_restart"
+            android:icon="@drawable/ic_restart_game"
+            android:title="@string/menu_restart_game"/>
+    <item
+            android:id="@+id/nav_continue"
+            android:icon="@drawable/ic_continue_game"
+            android:title="@string/menu_continue_game"/>
+    <item
+            android:id="@+id/nav_close"
+            android:icon="@drawable/ic_close_game"
+            android:title="@string/menu_close_game"/>
+    <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/menu_about"/>
+
+</menu>

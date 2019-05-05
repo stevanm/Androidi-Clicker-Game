@@ -10,7 +10,8 @@ import android.view.ViewGroup
 import rs.pparadigme.matf.funnyclicker.R
 
 class ScienceFragment : Fragment(){
-    val TAG = "ScienceFragment"
+
+    val TAG:String = this.javaClass.toString()
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
