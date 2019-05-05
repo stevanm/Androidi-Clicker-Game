@@ -1,5 +1,6 @@
 package rs.pparadigme.matf.funnyclicker.activities
 
+import android.content.DialogInterface
 import android.content.res.Configuration
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -8,8 +9,12 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.Toolbar
+import android.view.Gravity
+import android.view.Gravity.getAbsoluteGravity
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import android.widget.TextView
 import kotlinx.android.synthetic.main.content_main.*
@@ -18,6 +23,7 @@ import rs.pparadigme.matf.funnyclicker.fragments.MainFragment
 import rs.pparadigme.matf.funnyclicker.fragments.ResourcesFragment
 import rs.pparadigme.matf.funnyclicker.fragments.ScienceFragment
 import rs.pparadigme.matf.funnyclicker.fragments.UpgradesFragment
+import android.view.Gravity.CENTER as CENTER
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -194,9 +200,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
             R.id.nav_restart -> Toast.makeText(this, "Clicked item Restart Game", Toast.LENGTH_SHORT).show()
-            R.id.nav_continue -> Toast.makeText(this, "Clicked item Continue Game", Toast.LENGTH_SHORT).show()
-            R.id.nav_close -> Toast.makeText(this, "Clicked item Close Game", Toast.LENGTH_SHORT).show()
-            R.id.nav_about -> Toast.makeText(this, "Clicked item About Game", Toast.LENGTH_SHORT).show()
+            R.id.nav_close -> finish()
+            R.id.nav_about -> basicAlert()
+                //Toast.makeText(this, "Clicked item About Game", Toast.LENGTH_SHORT).show()
         }
         return true
     }
@@ -208,5 +214,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             super.onBackPressed()
         }
     }
+
+    fun basicAlert(){
+
+        val builder = AlertDialog.Builder(this, R.style.AlertDialogTheme)
+
+        with(builder) {
+            setTitle("About FunnyClicker Game")
+            //setMessage("Stevan Milic: stevanmilic@gmail.com\nIvan Nedic: xxx@gamil.com")
+            setMessage(R.string.about_gameplay).
+            setPositiveButton("OK", null)
+            create()
+            show()
+        }
+
+
+    }
+
 }
 

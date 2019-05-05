@@ -9,4 +9,11 @@
     <string name="navigation_drawer_open">Navigation Drawer Open</string>
     <string name="navigation_drawer_close">Navigation Drawer Close</string>
 
+    <string name="about_gameplay">Player goal is to collect resources
+            and to choose upgrades that best fit his gamestyle in order
+            to have efficient progress. As game pass it becomes more challenging
+            and requires a player to carefully balance between resources, as poor
+            choices will significantly slow down his progress.
+    </string>
+
 </resources>
