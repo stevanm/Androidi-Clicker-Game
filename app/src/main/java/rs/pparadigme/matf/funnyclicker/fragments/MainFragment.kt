@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.main_fragment.*
 import rs.pparadigme.matf.funnyclicker.*
+import rs.pparadigme.matf.funnyclicker.utils.AppUtils
 
 class MainFragment : Fragment(){
 
@@ -36,7 +37,7 @@ class MainFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         //mFoodVal?.setText(foodAm)
 
-        activity?.findViewById<TextView>(R.id.FoodVal)?.setText(""+ foodAm)
+        activity?.findViewById<TextView>(R.id.FoodVal)?.setText(""+ AppUtils.foodAm)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -50,17 +51,17 @@ class MainFragment : Fragment(){
         super.onStart()
 
         makeFood.setOnClickListener {
-            if (foodAm + foodCl <= foodCap){
-                foodAm += foodCl
+            if (AppUtils.foodAm + AppUtils.foodCl <= AppUtils.foodCap){
+                AppUtils.foodAm += AppUtils.foodCl
             }
             else {
-                foodAm = foodCap
+                AppUtils.foodAm = AppUtils.foodCap
             }
 
             Toast.makeText(activity, "+1 click", Toast.LENGTH_SHORT).show()
         }
         makeScience.setOnClickListener {
-            scienceAm += scienceCl
+            AppUtils.scienceAm += AppUtils.scienceCl
         }
 
     }

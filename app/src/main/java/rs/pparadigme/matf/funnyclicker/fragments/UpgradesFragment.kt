@@ -11,8 +11,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.upgrades_fragment.*
 import rs.pparadigme.matf.funnyclicker.R
 import rs.pparadigme.matf.funnyclicker.adapters.ItemAdapter
-import rs.pparadigme.matf.funnyclicker.foodAm
-import rs.pparadigme.matf.funnyclicker.foodPerSec
+import rs.pparadigme.matf.funnyclicker.utils.AppUtils
 import rs.pparadigme.matf.funnyclicker.utils.Item
 
 class UpgradesFragment : Fragment(){
@@ -76,9 +75,9 @@ class UpgradesFragment : Fragment(){
         }
 */
         buttonBuyUpgrade.setOnClickListener {
-            if (foodAm > 30){
-                foodAm -= 30
-                foodPerSec++
+            if (AppUtils.foodAm > 30){
+                AppUtils.foodAm -= 30
+                AppUtils.foodPerSec++
             }
             else{
             }

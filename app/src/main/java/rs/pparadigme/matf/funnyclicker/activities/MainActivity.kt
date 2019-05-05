@@ -1,6 +1,5 @@
 package rs.pparadigme.matf.funnyclicker.activities
 
-import android.content.DialogInterface
 import android.content.res.Configuration
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,10 +10,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.Toolbar
-import android.view.Gravity
-import android.view.Gravity.getAbsoluteGravity
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import android.widget.TextView
 import kotlinx.android.synthetic.main.content_main.*
@@ -23,6 +19,7 @@ import rs.pparadigme.matf.funnyclicker.fragments.MainFragment
 import rs.pparadigme.matf.funnyclicker.fragments.ResourcesFragment
 import rs.pparadigme.matf.funnyclicker.fragments.ScienceFragment
 import rs.pparadigme.matf.funnyclicker.fragments.UpgradesFragment
+import rs.pparadigme.matf.funnyclicker.utils.AppUtils
 import android.view.Gravity.CENTER as CENTER
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -38,8 +35,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-
-    var globalCounter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,8 +52,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
-
-        var mApp = MyApplication()
 
         ShowMainFragment()
 
@@ -83,28 +76,29 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         handler.postDelayed(object : Runnable {
             override fun run() {
-                globalCounter++
+                AppUtils.globalCounter++
                 handler.postDelayed(this, delay.toLong())
-                counter.setText("Ticks: " + globalCounter)
+                counter.setText("Ticks: " + AppUtils.globalCounter)
                 Calculate()
                 //scienceString =" ScienceFragment:"+ ((scienceAm * 1000).toInt())/1000.0
-                foodString = " Item: "+ foodAm +"/"+ foodCap
-                peopleString = "People: " + peopleAm +"/"+ peopleCap
+                AppUtils.foodString = " Item: "+ AppUtils.foodAm +"/"+ AppUtils.foodCap
+                AppUtils.peopleString = "People: " + AppUtils.peopleAm +"/"+ AppUtils.peopleCap
                 //statistic.setText( peopleString + foodString + scienceString)
-                statistic.setText( peopleString + foodString)
+                statistic.setText( AppUtils.peopleString + AppUtils.foodString)
 
-                findViewById<TextView>(R.id.FoodVal)?.setText(foodString)
-                findViewById<TextView>(R.id.scienceVal)?.setText(scienceString)
+                findViewById<TextView>(R.id.FoodVal)?.setText(AppUtils.foodString)
+                findViewById<TextView>(R.id.scienceVal)?.setText(AppUtils.scienceString)
             }
         }, delay.toLong())
     }
 
     fun Calculate(){
-        if (foodAm + foodPerSec <= foodCap) {
-            foodAm += foodPerSec
+
+        if (AppUtils.foodAm + AppUtils.foodPerSec <= AppUtils.foodCap) {
+            AppUtils.foodAm += AppUtils.foodPerSec
         }
         else {
-            foodAm = foodCap
+            AppUtils.foodAm = AppUtils.foodCap
         }
 
     }
@@ -176,7 +170,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     fun onClickMe()
     {
         Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
-        globalCounter++
+        AppUtils.globalCounter++
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -199,10 +193,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.nav_restart -> Toast.makeText(this, "Clicked item Restart Game", Toast.LENGTH_SHORT).show()
+            R.id.nav_restart -> AppUtils.restartAppData()
             R.id.nav_close -> finish()
             R.id.nav_about -> basicAlert()
-                //Toast.makeText(this, "Clicked item About Game", Toast.LENGTH_SHORT).show()
         }
         return true
     }
