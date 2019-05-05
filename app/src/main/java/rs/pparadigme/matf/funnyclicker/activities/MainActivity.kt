@@ -194,7 +194,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
             R.id.nav_restart -> AppUtils.restartAppData()
-            R.id.nav_close -> finish()
+            R.id.nav_close -> {
+                this.onDestroy()
+                this.finish()
+            }
             R.id.nav_about -> basicAlert()
         }
         return true
