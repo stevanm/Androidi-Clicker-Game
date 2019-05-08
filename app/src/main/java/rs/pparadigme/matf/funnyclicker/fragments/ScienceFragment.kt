@@ -49,12 +49,12 @@ class ScienceFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d(TAG, "onViewCreated")
         var itemsList = ArrayList<Item>()
-        itemsList.add(Item("Fire", 5, "Fire is very important", AppUtils.scienceResearched[0]))
-        itemsList.add(Item("Pottery", 25, "Enables storing more food", AppUtils.scienceResearched[1]))
-        itemsList.add(Item("Wheel", 30, "Wheel is the first step toward civilization", AppUtils.scienceResearched[2]))
-        itemsList.add(Item("Cultivation", 80, "Villagers produce more food", AppUtils.scienceResearched[3]))
-        itemsList.add(Item("Housing", 100, "Simple houses to increase population", AppUtils.scienceResearched[4]))
-        itemsList.add(Item("Tools", 120, "Enables various upgrades", AppUtils.scienceResearched[5]))
+        itemsList.add(Item("Fire", 5, "Fire is very important.", AppUtils.scienceResearched[0]))
+        itemsList.add(Item("Pottery", 25, "Enables storing more food.", AppUtils.scienceResearched[1]))
+        itemsList.add(Item("Wheel", 30, "Wheel is the first step toward civilization.", AppUtils.scienceResearched[2]))
+        itemsList.add(Item("Cultivation", 80, "Villagers produce more food.", AppUtils.scienceResearched[3]))
+        itemsList.add(Item("Housing", 100, "Simple houses to increase population.", AppUtils.scienceResearched[4]))
+        itemsList.add(Item("Tools", 120, "Enables various upgrades.", AppUtils.scienceResearched[5]))
         var selected = -1
 
         buttonBuyScience.setOnClickListener {

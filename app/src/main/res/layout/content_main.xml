@@ -61,14 +61,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="@dimen/left_margin_default"/>
+                android:layout_marginLeft="@dimen/left_margin_default"
+                android:textStyle="bold"/>
 
         <TextView
                 android:id="@+id/counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/right_margin_default"/>
+                android:layout_marginRight="@dimen/right_margin_default"
+                android:textStyle="bold"/>
 
     </RelativeLayout>
 
@@ -84,10 +86,11 @@
             android:layout_height="wrap_content">
     </FrameLayout>
 
+    <!--
     <View
             android:layout_width = "match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/bottom_margin_default"
             android:background="@color/lineColor"/>
-
+    -->
 </LinearLayout>
