@@ -53,9 +53,9 @@ class UpgradesFragment : Fragment(){
         itemsList.add(Item("House", R.drawable.ic_simple_house,
             "Increase people capacity by 5.",0))
         itemsList.add(Item("Barn", R.drawable.ic_barn,
-            "Increase food storage by 1000",0))
+            "Increase food storage by 1000.",0))
         itemsList.add(Item("School", R.drawable.ic_elementary_school,
-            "Increase science earned",0))
+            "Increase science earned.",0))
 
         adapter = ItemAdapter(activity!!.applicationContext, itemsList)
         gvImages.adapter = adapter
