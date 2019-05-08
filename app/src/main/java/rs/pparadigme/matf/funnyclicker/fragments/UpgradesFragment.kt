@@ -46,9 +46,9 @@ class UpgradesFragment : Fragment(){
             "Lower cost of people and pots.",0))
         itemsList.add(Item("Pot", R.drawable.ic_vase_30597,
             "Increase food storage by 30.",0))
-        itemsList.add(Item("Make science", R.drawable.ic_mouse_click,
+        itemsList.add(Item("Science", R.drawable.ic_mouse_click,
             "Increase science per click.",0))
-        itemsList.add(Item("Make food", R.drawable.ic_mouse_click,
+        itemsList.add(Item("Food", R.drawable.ic_mouse_click,
             "Increase food per click.",0))
         itemsList.add(Item("House", R.drawable.ic_simple_house,
             "Increase people capacity by 5.",0))

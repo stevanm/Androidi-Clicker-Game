@@ -111,8 +111,6 @@ class MainFragment : Fragment(){
             else {
                 AppUtils.foodAm = AppUtils.foodCap
             }
-
-            Toast.makeText(activity, "+1 click", Toast.LENGTH_SHORT).show()
         }
         makeScience.setOnClickListener {
             AppUtils.scienceAm += AppUtils.scienceCl

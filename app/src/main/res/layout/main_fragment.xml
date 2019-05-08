@@ -17,7 +17,7 @@
         <Button
                 android:id="@+id/makeFood"
                 android:text="Make Food"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textSize="@dimen/text_size_default"/>
@@ -39,7 +39,7 @@
         <Button
                 android:id="@+id/makeScience"
                 android:text="Make Science"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textSize="@dimen/text_size_default"/>
