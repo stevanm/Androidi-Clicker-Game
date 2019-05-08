@@ -49,7 +49,7 @@
             android:id="@+id/textUpgradeInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nothing selected"
+            android:text="Please, select your upgrade!"
             android:textAllCaps="false"
             android:layout_margin="@dimen/margin_default"/>
 

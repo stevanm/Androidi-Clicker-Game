@@ -10,7 +10,7 @@
             android:id="@+id/researchInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select reasearch"
+            android:text="Please, select your research!"
             android:layout_margin="@dimen/margin_default"/>
 
     <android.support.v4.widget.NestedScrollView
