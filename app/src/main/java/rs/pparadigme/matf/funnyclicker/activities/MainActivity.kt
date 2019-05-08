@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         MAIN, SCIENCE, UPGRADES, RESOURCES
     }
 
+    var time = 0
+
     var FragmentLoaded = Fragments.MAIN
     val manager = supportFragmentManager
 
@@ -58,6 +60,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         AppUtils.upgradeCosts.add(5)
         AppUtils.upgradeCosts.add(5)
         AppUtils.upgradeCosts.add(5)
+        AppUtils.upgradeCosts.add(100)
         ShowMainFragment()
 
 
@@ -78,19 +81,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         val handler = Handler()
-        val delay = 1000 //milliseconds
+        val delay = 200 //milliseconds
 
         handler.postDelayed(object : Runnable {
             override fun run() {
-                AppUtils.globalCounter++
+                if(time == 1000) {
+                    time = 0;
+                    AppUtils.globalCounter++
+                    Calculate()
+                    counter.setText("Ticks: " + AppUtils.globalCounter)
+                }
                 handler.postDelayed(this, delay.toLong())
                 counter.setText("Ticks: " + AppUtils.globalCounter)
-                Calculate()
+                time += delay
                 AppUtils.scienceString =" Science:"+ ((AppUtils.scienceAm * 1000).toInt())/1000.0
                 AppUtils.foodString = " Item: "+ AppUtils.foodAm +"/"+ AppUtils.foodCap
                 AppUtils.peopleString = "People: " + AppUtils.peopleAm +"/"+ AppUtils.peopleCap
                 statistic.setText(AppUtils.peopleString + AppUtils.foodString + AppUtils.scienceString)
-                //statistic.setText( AppUtils.peopleString + AppUtils.foodString)
 
                 findViewById<TextView>(R.id.FoodVal)?.setText(AppUtils.foodString)
                 findViewById<TextView>(R.id.scienceVal)?.setText(AppUtils.scienceString)

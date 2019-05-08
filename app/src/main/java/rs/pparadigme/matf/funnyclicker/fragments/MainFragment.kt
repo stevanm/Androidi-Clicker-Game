@@ -35,9 +35,8 @@ class MainFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        //mFoodVal?.setText(foodAm)
-
         activity?.findViewById<TextView>(R.id.FoodVal)?.setText(""+ AppUtils.foodAm)
+        activity?.findViewById<TextView>(R.id.scienceVal)?.setText(""+ AppUtils.scienceAm)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

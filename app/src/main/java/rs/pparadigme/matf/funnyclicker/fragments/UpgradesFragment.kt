@@ -32,12 +32,6 @@ class UpgradesFragment : Fragment(){
         super.onCreate(savedInstanceState)
     }
 
-    fun onWheelClick(){
-        textUpgradeCostAm.setText("30 food")
-        textUpgradeInfo.setText("This upgrade provide 1 food per second")
-    }
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
         return inflater!!.inflate(R.layout.upgrades_fragment, container, false)
@@ -56,6 +50,8 @@ class UpgradesFragment : Fragment(){
             "Increase science per click.",0))
         itemsList.add(Item("Make food", R.drawable.ic_mouse_click,
             "Increase food per click.",0))
+        itemsList.add(Item("House", R.drawable.ic_simple_house,
+            "Increase people capacity by 5.",0))
 
         adapter = ItemAdapter(activity!!.applicationContext, itemsList)
         gvImages.adapter = adapter
@@ -102,6 +98,16 @@ class UpgradesFragment : Fragment(){
                 if (selected == 3) AppUtils.foodCl++
                 if (selected == 4) AppUtils.scienceCl++
 
+                if (selected == 5) {
+                    if (AppUtils.scienceResearched[4] > 0) {
+                        AppUtils.peopleCap += 5
+                    } else {
+                        available = false
+                        Toast.makeText(activity!!.applicationContext, "Housing not researched yet", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
+
                 if (available) {
                     textUpgradeValue.setText(" " + AppUtils.upgradeCosts[selected])
 
@@ -127,20 +133,6 @@ class UpgradesFragment : Fragment(){
     override fun onStart() {
         Log.d(TAG, "onStart")
         super.onStart()
-
-/*
-        imageButtonWheel.setOnClickListener {
-            onWheelClick()
-        }
-*/
-/*        buttonBuyUpgrade.setOnClickListener {
-            if (AppUtils.foodAm > 30){
-                AppUtils.foodAm -= 30
-                AppUtils.foodPerSec++
-            }
-            else{
-            }
-        }*/
     }
 
     override fun onResume() {

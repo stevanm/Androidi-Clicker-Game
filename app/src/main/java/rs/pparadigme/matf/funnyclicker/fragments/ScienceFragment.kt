@@ -52,7 +52,7 @@ class ScienceFragment : Fragment(){
         itemsList.add(Item("Fire", 5, "Fire is very important", AppUtils.scienceResearched[0]))
         itemsList.add(Item("Pottery", 25, "Enables storing more food", AppUtils.scienceResearched[1]))
         itemsList.add(Item("Wheel", 30, "Wheel is the first step toward civilization", AppUtils.scienceResearched[2]))
-        itemsList.add(Item("Cultivation", 80, "Better food production", AppUtils.scienceResearched[3]))
+        itemsList.add(Item("Cultivation", 80, "Villagers produce more food", AppUtils.scienceResearched[3]))
         itemsList.add(Item("Housing", 100, "Simple houses to increase population", AppUtils.scienceResearched[4]))
         itemsList.add(Item("Tools", 120, "Enables various upgrades", AppUtils.scienceResearched[5]))
 
@@ -66,6 +66,9 @@ class ScienceFragment : Fragment(){
                 AppUtils.scienceAm -= itemsList[selected].image!!
                 updateView()
                 Toast.makeText(activity!!.applicationContext, "Well done! You researched: " + itemsList[selected].name, Toast.LENGTH_SHORT).show()
+                if (selected == 3) {
+                    AppUtils.villagersEff = 2.0
+                }
             }
             else {
                 Toast.makeText(activity!!.applicationContext, "Not enough science for this research", Toast.LENGTH_SHORT).show()
