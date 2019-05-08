@@ -45,7 +45,7 @@ class UpgradesFragment : Fragment(){
         itemsList.add(Item("Wheel", R.drawable.ic_wheel,
             "Lower cost of people and pots.",0))
         itemsList.add(Item("Pot", R.drawable.ic_vase_30597,
-            "Increase food storage by 30",0))
+            "Increase food storage by 30.",0))
         itemsList.add(Item("Make science", R.drawable.ic_mouse_click,
             "Increase science per click.",0))
         itemsList.add(Item("Make food", R.drawable.ic_mouse_click,
@@ -61,7 +61,7 @@ class UpgradesFragment : Fragment(){
             textUpgradeValue.setText(" " + AppUtils.upgradeCosts[id.toInt()])
             textUpgradeInfo.setText(itemsList[id.toInt()].info)
             selected = id.toInt()
-            Toast.makeText(activity!!.applicationContext, "Clicked on position " + position, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(activity!!.applicationContext, "Clicked on position " + position, Toast.LENGTH_SHORT).show()
         }
 
         buttonBuyUpgrade.setOnClickListener {

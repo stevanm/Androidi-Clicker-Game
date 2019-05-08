@@ -24,11 +24,6 @@ class MainFragment : Fragment(){
         super.onAttach(context)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d(TAG, "onCreate")
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
         return inflater!!.inflate(R.layout.main_fragment, container, false)
@@ -37,6 +32,32 @@ class MainFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         activity?.findViewById<TextView>(R.id.FoodVal)?.setText(""+ AppUtils.foodAm)
         activity?.findViewById<TextView>(R.id.scienceVal)?.setText(""+ AppUtils.scienceAm)
+
+        /* TODO: Add onClick playgame logics */
+        foodPlus.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "Food '+' clicked", Toast.LENGTH_SHORT).show()
+        })
+
+        foodMinus.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "Food '-' clicked", Toast.LENGTH_SHORT).show()
+        })
+
+        sciencePlus.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "Science '+' clicked", Toast.LENGTH_SHORT).show()
+        })
+
+        scienceMinus.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "Science '-' clicked", Toast.LENGTH_SHORT).show()
+        })
+
+        resourcePlus.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "Resource '+' clicked", Toast.LENGTH_SHORT).show()
+        })
+
+        resourceMinus.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "Resource '-' clicked", Toast.LENGTH_SHORT).show()
+        })
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -45,7 +66,6 @@ class MainFragment : Fragment(){
     }
 
     override fun onStart() {
-
         Log.d(TAG, "onStart")
         super.onStart()
 
@@ -89,7 +109,6 @@ class MainFragment : Fragment(){
         Log.d(TAG, "onDestroy")
         super.onDestroy()
     }
-
 
     override fun onDetach() {
         Log.d(TAG, "onDetach")
