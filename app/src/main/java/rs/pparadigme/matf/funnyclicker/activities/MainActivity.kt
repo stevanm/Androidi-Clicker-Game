@@ -94,8 +94,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 handler.postDelayed(this, delay.toLong())
                 counter.setText("Ticks: " + AppUtils.globalCounter)
                 time += delay
-                AppUtils.scienceString =" Science:"+ ((AppUtils.scienceAm * 1000).toInt())/1000.0
-                AppUtils.foodString = " Item: "+ AppUtils.foodAm +"/"+ AppUtils.foodCap
+                AppUtils.scienceString =" Science: "+ ((AppUtils.scienceAm * 1000).toInt())/1000.0
+                AppUtils.foodString = " Food: "+ AppUtils.foodAm +"/"+ AppUtils.foodCap
                 AppUtils.peopleString = "People: " + AppUtils.peopleAm +"/"+ AppUtils.peopleCap
                 statistic.setText(AppUtils.peopleString + AppUtils.foodString + AppUtils.scienceString)
 

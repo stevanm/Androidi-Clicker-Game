@@ -16,7 +16,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Food"
+                android:text="Food: "
                 android:textAllCaps="false"
                 android:layout_margin="@dimen/margin_default"/>
 
@@ -24,8 +24,7 @@
                 android:id="@+id/foodResources"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:text="xxx"/>
+                android:layout_margin="@dimen/margin_default"/>
 
     </LinearLayout>
 
@@ -40,7 +39,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="People"
+                android:text="People: "
                 android:textAllCaps="false"
                 android:layout_margin="@dimen/margin_default"/>
 
@@ -48,8 +47,7 @@
                 android:id="@+id/peopleResources"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:text="xxx"/>
+                android:layout_margin="@dimen/margin_default"/>
 
     </LinearLayout>
 
@@ -64,7 +62,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wood"
+                android:text="Wood: "
                 android:textAllCaps="false"
                 android:layout_margin="@dimen/margin_default"/>
 
@@ -72,8 +70,7 @@
                 android:id="@+id/woodResources"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_default"
-                android:text="xxx"/>
+                android:layout_margin="@dimen/margin_default"/>
 
     </LinearLayout>
 

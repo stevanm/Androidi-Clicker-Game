@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.resources_fragment.*
 import rs.pparadigme.matf.funnyclicker.R
+import rs.pparadigme.matf.funnyclicker.utils.AppUtils
 
 class ResourcesFragment : Fragment(){
 
@@ -26,6 +28,11 @@ class ResourcesFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
         return inflater!!.inflate(R.layout.resources_fragment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        foodResources.setText("" + AppUtils.foodAm)
+        peopleResources.setText("" + AppUtils.peopleAm)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

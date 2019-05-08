@@ -77,34 +77,40 @@ class ScienceFragment : Fragment(){
 
         fireSc0.setOnClickListener {
             selected = 0
-            researchInfo.setText("Cost:" + itemsList[selected].image + ";  " + itemsList[selected].info)
+            researchInfo.setText("Cost: " + itemsList[selected].image + ";  " + itemsList[selected].info)
             Toast.makeText(activity!!.applicationContext, itemsList[selected].name, Toast.LENGTH_SHORT).show()
         }
+
         potterySc1.setOnClickListener {
             selected = 1
-            researchInfo.setText("Cost:" + itemsList[selected].image + ";  " + itemsList[selected].info)
+            researchInfo.setText("Cost: " + itemsList[selected].image + ";  " + itemsList[selected].info)
             Toast.makeText(activity!!.applicationContext, itemsList[selected].name, Toast.LENGTH_SHORT).show()
         }
+
         wheelSc2.setOnClickListener {
             selected = 2
-            researchInfo.setText("Cost:" + itemsList[selected].image + ";  " + itemsList[selected].info)
+            researchInfo.setText("Cost: " + itemsList[selected].image + ";  " + itemsList[selected].info)
             Toast.makeText(activity!!.applicationContext, itemsList[selected].name, Toast.LENGTH_SHORT).show()
         }
+
         cultivationSc3.setOnClickListener {
             selected = 3
-            researchInfo.setText("Cost:" + itemsList[selected].image + ";  " + itemsList[selected].info)
+            researchInfo.setText("Cost: " + itemsList[selected].image + ";  " + itemsList[selected].info)
             Toast.makeText(activity!!.applicationContext, itemsList[selected].name, Toast.LENGTH_SHORT).show()
         }
+
         houseSc4.setOnClickListener {
             selected = 4
-            researchInfo.setText("Cost:" + itemsList[selected].image + ";  " + itemsList[selected].info)
+            researchInfo.setText("Cost: " + itemsList[selected].image + ";  " + itemsList[selected].info)
             Toast.makeText(activity!!.applicationContext, itemsList[selected].name, Toast.LENGTH_SHORT).show()
         }
+
         toolsSc5.setOnClickListener {
             selected = 5
-            researchInfo.setText("Cost:" + itemsList[selected].image + ";  " + itemsList[selected].info)
+            researchInfo.setText("Cost: " + itemsList[selected].image + ";  " + itemsList[selected].info)
             Toast.makeText(activity!!.applicationContext, itemsList[selected].name, Toast.LENGTH_SHORT).show()
         }
+
         super.onViewCreated(view, savedInstanceState)
     }
 

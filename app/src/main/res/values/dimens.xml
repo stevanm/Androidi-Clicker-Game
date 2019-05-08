@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="left_margin_default">10dp</dimen>
-    <dimen name="right_margin_default">10dp</dimen>
+    <dimen name="left_margin_default">5dp</dimen>
+    <dimen name="right_margin_default">5dp</dimen>
     <dimen name="top_margin_default">5dp</dimen>
     <dimen name="bottom_margin_default">5dp</dimen>
-    <dimen name="margin_default">10dp</dimen>
+    <dimen name="margin_default">5dp</dimen>
 
 
     <dimen name="padding_default">5dp</dimen>

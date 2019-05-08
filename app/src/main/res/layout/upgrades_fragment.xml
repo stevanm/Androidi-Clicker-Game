@@ -8,7 +8,7 @@
     <GridView
             android:id="@+id/gvImages"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:horizontalSpacing="5dp"
             android:numColumns="5"
             android:verticalSpacing="5dp"
@@ -41,8 +41,7 @@
         <TextView
                 android:id="@+id/textUpgradeValue"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Xxxx"/>
+                android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -51,14 +50,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nothing selected"
-            android:textAllCaps="false"
-            android:layout_margin="@dimen/margin_default"/>
-
-    <TextView
-            android:id="@+id/textUpgradeCostAm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Xxx"
             android:textAllCaps="false"
             android:layout_margin="@dimen/margin_default"/>
 

@@ -160,7 +160,6 @@ class UpgradesFragment : Fragment(){
         super.onDestroy()
     }
 
-
     override fun onDetach() {
         Log.d(TAG, "onDetach")
         super.onDetach()
