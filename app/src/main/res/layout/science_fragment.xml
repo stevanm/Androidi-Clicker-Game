@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
@@ -15,11 +15,9 @@
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            xmlns:android="http://schemas.android.com/apk/res/android">
+            android:layout_height="340dp">
 
         <RelativeLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_default">
@@ -125,13 +123,30 @@
                     android:layout_alignStart="@+id/wheelRight"/>
 
             <ImageButton
-                    android:id="@+id/image12"
+                    android:id="@+id/toolsBot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_green" android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_red" android:layout_marginTop="5dp"
                     android:layout_below="@+id/toolsSc5"
                     android:background="@color/lineColor" android:layout_marginStart="15dp"
                     android:layout_alignStart="@+id/toolsSc5"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/ic_red" android:id="@+id/housingBot"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/houseSc4" android:layout_marginStart="15dp"
+                    android:layout_alignStart="@+id/houseSc4"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/ic_letter"
+                    android:id="@+id/letterSc6" android:layout_marginTop="5dp"
+                    android:layout_below="@+id/housingBot" android:layout_marginStart="-15dp"
+                    android:layout_alignStart="@+id/housingBot"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/ic_pickaxe"
+                    android:id="@+id/pickaxeSc7" android:layout_marginTop="5dp" android:layout_below="@+id/toolsBot"
+                    android:layout_marginStart="-15dp" android:layout_alignStart="@+id/toolsBot"/>
 
         </RelativeLayout>
 

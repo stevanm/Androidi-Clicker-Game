@@ -33,7 +33,7 @@ object AppUtils {
     var globalCounter:Int = 0
 
     var upgradeCosts = ArrayList<Int>()
-    var scienceResearched = ArrayList<Int>(Collections.nCopies(6, 0))
+    var scienceResearched = ArrayList<Int>(Collections.nCopies(8, 0))
     /* resart all app data */
     fun restartAppData(){
 
@@ -73,7 +73,7 @@ object AppUtils {
         upgradeCosts.add(1000)
         upgradeCosts.add(2000)
 
-        scienceResearched = ArrayList<Int>(   Collections.nCopies(6,0))
+        scienceResearched = ArrayList<Int>(   Collections.nCopies(8,0))
     }
 
 }

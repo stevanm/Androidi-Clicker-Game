@@ -45,6 +45,12 @@ class ScienceFragment : Fragment(){
             wheelLeft.setImageResource(R.drawable.ic_green_left)
             wheelRight.setImageResource(R.drawable.ic_green_right)
         }
+        if(AppUtils.scienceResearched[6] > 0) {
+            housingBot.setImageResource(R.drawable.ic_green)
+        }
+        if(AppUtils.scienceResearched[7] > 0) {
+            toolsBot.setImageResource(R.drawable.ic_green)
+        }
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d(TAG, "onViewCreated")
@@ -55,6 +61,8 @@ class ScienceFragment : Fragment(){
         itemsList.add(Item("Cultivation", 80, "Villagers produce more food.", AppUtils.scienceResearched[3]))
         itemsList.add(Item("Housing", 100, "Simple houses to increase population.", AppUtils.scienceResearched[4]))
         itemsList.add(Item("Tools", 120, "Enables various upgrades.", AppUtils.scienceResearched[5]))
+        itemsList.add(Item("Writing", 10000, "Improves people efficacy.", AppUtils.scienceResearched[6]))
+        itemsList.add(Item("Mining", 5000, "Improves miners tools.", AppUtils.scienceResearched[7]))
         var selected = -1
 
         buttonBuyScience.setOnClickListener {
@@ -74,6 +82,15 @@ class ScienceFragment : Fragment(){
                     if (selected == 3) {
                         AppUtils.villagersEff = 2.0
                     }
+                    if (selected == 6){
+                        AppUtils.villagersEff *= 2
+                        AppUtils.minersEff *= 2
+                        AppUtils.scientistsEff *= 2
+                    }
+                    if (selected == 7){
+                        AppUtils.minersEff *= 2
+                    }
+
                 } else {
                     Toast.makeText(
                         activity!!.applicationContext,
