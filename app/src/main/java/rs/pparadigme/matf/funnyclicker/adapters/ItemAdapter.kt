@@ -45,6 +45,4 @@ class ItemAdapter : BaseAdapter {
 
         return itemView
     }
-
-
 }

@@ -68,6 +68,8 @@ object AppUtils {
         upgradeCosts.add(5)
         upgradeCosts.add(5)
         upgradeCosts.add(100)
+        upgradeCosts.add(1000)
+        upgradeCosts.add(2000)
 
         scienceResearched = ArrayList<Int>(   Collections.nCopies(6,0))
     }

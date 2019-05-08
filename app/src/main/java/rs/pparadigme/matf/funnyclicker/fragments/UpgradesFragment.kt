@@ -20,7 +20,7 @@ class UpgradesFragment : Fragment(){
 
     var adapter: ItemAdapter? = null
     var itemsList = ArrayList<Item>()
-    var selected = 0
+    var selected = -1
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
@@ -38,7 +38,7 @@ class UpgradesFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        selected = -1
         /* load items - images */
         itemsList.add(Item("Man", R.drawable.ic_man_svgrepo_com,
             "Increase number of people by 1. People make science and food automatically.", 0))
@@ -52,6 +52,10 @@ class UpgradesFragment : Fragment(){
             "Increase food per click.",0))
         itemsList.add(Item("House", R.drawable.ic_simple_house,
             "Increase people capacity by 5.",0))
+        itemsList.add(Item("Barn", R.drawable.ic_barn,
+            "Increase food storage by 1000",0))
+        itemsList.add(Item("School", R.drawable.ic_elementary_school,
+            "Increase science earned",0))
 
         adapter = ItemAdapter(activity!!.applicationContext, itemsList)
         gvImages.adapter = adapter
@@ -66,7 +70,7 @@ class UpgradesFragment : Fragment(){
 
         buttonBuyUpgrade.setOnClickListener {
 
-            if(AppUtils.foodAm >= AppUtils.upgradeCosts[selected]) {
+            if(selected != -1 && AppUtils.foodAm >= AppUtils.upgradeCosts[selected]) {
                 Toast.makeText(
                     activity!!.applicationContext,
                     "Sel" + selected + " " + AppUtils.upgradeCosts[selected],
@@ -107,12 +111,15 @@ class UpgradesFragment : Fragment(){
                             .show()
                     }
                 }
+                if (selected == 6) AppUtils.foodCap += 1000
+
+                if (selected == 7) AppUtils.scientistsEff++
 
                 if (available) {
-                    textUpgradeValue.setText(" " + AppUtils.upgradeCosts[selected])
-
                     AppUtils.foodAm -= AppUtils.upgradeCosts[selected]
                     AppUtils.upgradeCosts[selected] = (AppUtils.upgradeCosts[selected] * 1.5).toInt()
+
+                    textUpgradeValue.setText(" " + AppUtils.upgradeCosts[selected])
 
                     Toast.makeText(activity!!.applicationContext, "Bought upgrade", Toast.LENGTH_SHORT)
                         .show()

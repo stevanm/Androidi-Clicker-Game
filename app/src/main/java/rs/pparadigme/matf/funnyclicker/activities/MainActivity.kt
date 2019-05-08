@@ -61,6 +61,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         AppUtils.upgradeCosts.add(5)
         AppUtils.upgradeCosts.add(5)
         AppUtils.upgradeCosts.add(100)
+        AppUtils.upgradeCosts.add(1000)
+        AppUtils.upgradeCosts.add(2000)
+
         ShowMainFragment()
 
 

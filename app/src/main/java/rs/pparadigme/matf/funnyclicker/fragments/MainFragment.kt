@@ -62,7 +62,6 @@ class MainFragment : Fragment(){
         makeScience.setOnClickListener {
             AppUtils.scienceAm += AppUtils.scienceCl
         }
-
     }
 
     override fun onResume() {

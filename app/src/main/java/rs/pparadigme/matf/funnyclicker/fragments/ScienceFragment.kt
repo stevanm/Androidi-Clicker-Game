@@ -16,7 +16,7 @@ import rs.pparadigme.matf.funnyclicker.utils.Item
 class ScienceFragment : Fragment(){
 
     val TAG:String = this.javaClass.toString()
-    var selected = 0
+    var selected = -1
 
     override fun onAttach(context: Context?) {
         Log.d(TAG, "onAttach")
@@ -55,23 +55,32 @@ class ScienceFragment : Fragment(){
         itemsList.add(Item("Cultivation", 80, "Villagers produce more food", AppUtils.scienceResearched[3]))
         itemsList.add(Item("Housing", 100, "Simple houses to increase population", AppUtils.scienceResearched[4]))
         itemsList.add(Item("Tools", 120, "Enables various upgrades", AppUtils.scienceResearched[5]))
+        var selected = -1
 
         buttonBuyScience.setOnClickListener {
-            if(itemsList[selected].bought!! > 0){
-                Toast.makeText(activity!!.applicationContext, "Already researched", Toast.LENGTH_SHORT).show()
-            }
-            else if(AppUtils.scienceAm >= itemsList[selected].image!!) {
-                itemsList[selected].bought = 1
-                AppUtils.scienceResearched[selected] = 1
-                AppUtils.scienceAm -= itemsList[selected].image!!
-                updateView()
-                Toast.makeText(activity!!.applicationContext, "Well done! You researched: " + itemsList[selected].name, Toast.LENGTH_SHORT).show()
-                if (selected == 3) {
-                    AppUtils.villagersEff = 2.0
+            if(selected > -1) {
+                if (itemsList[selected].bought!! > 0) {
+                    Toast.makeText(activity!!.applicationContext, "Already researched", Toast.LENGTH_SHORT).show()
+                } else if (AppUtils.scienceAm >= itemsList[selected].image!!) {
+                    itemsList[selected].bought = 1
+                    AppUtils.scienceResearched[selected] = 1
+                    AppUtils.scienceAm -= itemsList[selected].image!!
+                    updateView()
+                    Toast.makeText(
+                        activity!!.applicationContext,
+                        "Well done! You researched: " + itemsList[selected].name,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    if (selected == 3) {
+                        AppUtils.villagersEff = 2.0
+                    }
+                } else {
+                    Toast.makeText(
+                        activity!!.applicationContext,
+                        "Not enough science for this research",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
-            }
-            else {
-                Toast.makeText(activity!!.applicationContext, "Not enough science for this research", Toast.LENGTH_SHORT).show()
             }
         }
 
