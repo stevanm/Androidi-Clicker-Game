@@ -53,7 +53,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
+        AppUtils.upgradeCosts.add(5)
+        AppUtils.upgradeCosts.add(5)
+        AppUtils.upgradeCosts.add(5)
+        AppUtils.upgradeCosts.add(5)
+        AppUtils.upgradeCosts.add(5)
         ShowMainFragment()
+
 
         mainButton.setOnClickListener {
             onClickMain()
@@ -80,11 +86,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 handler.postDelayed(this, delay.toLong())
                 counter.setText("Ticks: " + AppUtils.globalCounter)
                 Calculate()
-                //scienceString =" ScienceFragment:"+ ((scienceAm * 1000).toInt())/1000.0
+                AppUtils.scienceString =" Science:"+ ((AppUtils.scienceAm * 1000).toInt())/1000.0
                 AppUtils.foodString = " Item: "+ AppUtils.foodAm +"/"+ AppUtils.foodCap
                 AppUtils.peopleString = "People: " + AppUtils.peopleAm +"/"+ AppUtils.peopleCap
-                //statistic.setText( peopleString + foodString + scienceString)
-                statistic.setText( AppUtils.peopleString + AppUtils.foodString)
+                statistic.setText(AppUtils.peopleString + AppUtils.foodString + AppUtils.scienceString)
+                //statistic.setText( AppUtils.peopleString + AppUtils.foodString)
 
                 findViewById<TextView>(R.id.FoodVal)?.setText(AppUtils.foodString)
                 findViewById<TextView>(R.id.scienceVal)?.setText(AppUtils.scienceString)
@@ -94,13 +100,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     fun Calculate(){
 
+        AppUtils.villagers = AppUtils.peopleAm / 2
+        AppUtils.scientists = AppUtils.peopleAm / 2
+        AppUtils.foodPerSec = (AppUtils.villagers * AppUtils.villagersEff).toInt()
         if (AppUtils.foodAm + AppUtils.foodPerSec <= AppUtils.foodCap) {
             AppUtils.foodAm += AppUtils.foodPerSec
         }
         else {
             AppUtils.foodAm = AppUtils.foodCap
         }
-
+        AppUtils.sciencePerSec = (AppUtils.scientists * AppUtils.scientistsEff).toInt()
+        AppUtils.scienceAm += AppUtils.sciencePerSec
     }
 
     fun ShowMainFragment (){
@@ -219,7 +229,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             setTitle("About FunnyClicker Game")
             //setMessage("Stevan Milic: stevanmilic@gmail.com\nIvan Nedic: xxx@gamil.com")
             setMessage(R.string.about_gameplay).
-            setPositiveButton("OK", null)
+                setPositiveButton("OK", null)
             create()
             show()
         }
@@ -228,4 +238,3 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 }
-

@@ -13,105 +13,111 @@
             android:layout_margin="@dimen/margin_default">
 
         <ImageButton
-                android:id="@+id/image01"
+                android:id="@+id/fireSc0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_alignParentEnd="true"
-                android:layout_marginEnd="203dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_fire" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="150dp"
+                android:background="@color/lineColor"/>
 
         <ImageButton
-                android:id="@+id/image02"
+                android:id="@+id/fireLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo"
-                android:background="@color/colorAccent"
-                android:layout_marginTop="23dp"
-                android:layout_below="@+id/image01"/>
+                android:src="@drawable/ic_red_left"
+                android:background="@color/lineColor"
+                android:layout_marginTop=" 5dp"
+                android:layout_below="@+id/fireSc0" android:layout_marginStart="-5dp"
+                android:layout_alignStart="@+id/fireSc0"/>
 
         <ImageButton
-                android:id="@+id/image03"
+                android:id="@+id/fireRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-24dp"
-                android:layout_below="@+id/image02" android:layout_alignParentEnd="true" android:layout_marginEnd="151dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_red_right" android:layout_marginTop="5dp"
+                android:layout_below="@+id/fireSc0"
+                android:background="@color/lineColor" android:layout_toEndOf="@+id/fireLeft"
+                android:layout_marginStart="0dp"/>
 
         <ImageButton
-                android:id="@+id/image04"
+                android:id="@+id/potterySc1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="7dp"
-                android:layout_below="@+id/image03" android:layout_alignParentEnd="true" android:layout_marginEnd="0dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_ceramic_pottery" android:layout_marginTop="5dp"
+                android:layout_below="@+id/fireLeft"
+                android:background="@color/lineColor"
+                android:layout_toStartOf="@+id/fireLeft" android:layout_marginEnd="-35dp"/>
 
         <ImageButton
-                android:id="@+id/image05"
+                android:id="@+id/wheelSc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-9dp"
-                android:layout_below="@+id/image04" android:layout_alignParentEnd="true"
-                android:layout_marginEnd="281dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_alloy_wheel_wheel" android:layout_marginTop="5dp"
+                android:layout_below="@+id/fireRight"
+                android:layout_marginEnd="-38dp"
+                android:background="@color/lineColor" android:layout_alignEnd="@+id/fireRight"/>
 
         <ImageButton
-                android:id="@+id/image06"
+                android:id="@+id/potteryLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="14dp"
-                android:layout_below="@+id/image05" android:layout_alignParentEnd="true"
-                android:layout_marginEnd="214dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_red_left" android:layout_marginTop="5dp"
+                android:layout_below="@+id/potterySc1"
+                android:background="@color/lineColor" android:layout_marginStart="-5dp"
+                android:layout_alignStart="@+id/potterySc1"/>
 
         <ImageButton
-                android:id="@+id/image07"
+                android:id="@+id/wheelLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="5dp"
-                android:layout_below="@+id/image06" android:layout_alignParentEnd="true"
-                android:layout_marginEnd="102dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_red_left" android:layout_marginTop="5dp"
+                android:layout_below="@+id/wheelSc2"
+                android:background="@color/lineColor" android:layout_marginStart="-5dp"
+                android:layout_alignStart="@+id/wheelSc2"/>
 
         <ImageButton
-                android:id="@+id/image08"
+                android:id="@+id/wheelRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="8dp"
-                android:layout_below="@+id/image07" android:layout_alignParentEnd="true" android:layout_marginEnd="304dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_red_right" android:layout_marginTop="5dp"
+                android:layout_below="@+id/wheelSc2"
+                android:background="@color/lineColor" android:layout_toEndOf="@+id/wheelLeft"
+                android:layout_marginStart="0dp"/>
 
 
         <ImageButton
-                android:id="@+id/image09"
+                android:id="@+id/cultivationSc3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-11dp"
-                android:layout_below="@+id/image08" android:layout_alignParentEnd="true" android:layout_marginEnd="26dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_apple" android:layout_marginTop="5dp"
+                android:layout_below="@+id/potteryLeft"
+                android:background="@color/lineColor" android:layout_marginStart="-35dp"
+                android:layout_alignStart="@+id/potteryLeft"/>
 
         <ImageButton
-                android:id="@+id/image10"
+                android:id="@+id/houseSc4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="-2dp"
-                android:layout_below="@+id/image09" android:layout_alignParentEnd="true" android:layout_marginEnd="159dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_simple_house" android:layout_marginTop="5dp"
+                android:layout_below="@+id/wheelLeft"
+                android:background="@color/lineColor" android:layout_marginStart="-37dp"
+                android:layout_alignStart="@+id/wheelLeft"/>
 
         <ImageButton
-                android:id="@+id/image11"
+                android:id="@+id/toolsSc5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_insert_photo" android:layout_marginTop="13dp"
-                android:layout_below="@+id/image10" android:layout_alignParentEnd="true"
-                android:layout_marginEnd="349dp"
-                android:background="@color/colorAccent"/>
+                android:src="@drawable/ic_tools" android:layout_marginTop="5dp"
+                android:layout_below="@+id/wheelRight"
+                android:background="@color/lineColor" android:layout_marginStart="5dp"
+                android:layout_alignStart="@+id/wheelRight"/>
 
         <ImageButton
                 android:id="@+id/image12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_insert_photo" android:layout_marginTop="-3dp"
-                android:layout_below="@+id/image11" android:layout_alignParentEnd="true" android:layout_marginEnd="62dp"
+                android:layout_below="@+id/toolsSc5" android:layout_alignParentEnd="true" android:layout_marginEnd="62dp"
                 android:background="@color/colorAccent"/>
 
     </RelativeLayout>
@@ -121,6 +127,10 @@
             android:layout_height="wrap_content"
             android:text="Buy"
             android:textAllCaps="false"
-            android:textSize="@dimen/text_size_default"/>
+            android:textSize="@dimen/text_size_default" android:id="@+id/buttonBuyScience"/>
+    <TextView
+            android:text="Select reasearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/researchInfo"/>
 
 </LinearLayout>
