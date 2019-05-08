@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 AppUtils.scienceString =" Science: "+ ((AppUtils.scienceAm * 1000).toInt())/1000.0
                 AppUtils.foodString = " Food: "+ AppUtils.foodAm +"/"+ AppUtils.foodCap
                 AppUtils.peopleString = "People: " + AppUtils.peopleAm +"/"+ AppUtils.peopleCap
-                statistic.setText(AppUtils.peopleString + AppUtils.foodString + AppUtils.scienceString)
+                statistic.setText(AppUtils.peopleString + "  " + AppUtils.foodString  + "  " +  AppUtils.scienceString)
 
                 findViewById<TextView>(R.id.FoodVal)?.setText(AppUtils.foodString)
                 findViewById<TextView>(R.id.scienceVal)?.setText(AppUtils.scienceString)
@@ -163,34 +163,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     {
         if(FragmentLoaded != Fragments.MAIN)
             ShowMainFragment()
-        Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
     }
 
     fun onClickUpgrades()
     {
         if(FragmentLoaded != Fragments.UPGRADES)
             ShowUpgradesFragment()
-        Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
     }
 
     fun onClickScience()
     {
         if(FragmentLoaded != Fragments.SCIENCE)
             ShowScienceFragment()
-        Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
     }
 
     fun onClickResources()
     {
         if(FragmentLoaded != Fragments.RESOURCES)
             ShowResourcesFragment()
-        Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
-    }
-
-    fun onClickMe()
-    {
-        Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
-        AppUtils.globalCounter++
+        //Toast.makeText(this@MainActivity, "+1 click", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
