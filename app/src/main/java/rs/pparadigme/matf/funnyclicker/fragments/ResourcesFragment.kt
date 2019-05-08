@@ -33,6 +33,10 @@ class ResourcesFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         foodResources.setText("" + AppUtils.foodAm)
         peopleResources.setText("" + AppUtils.peopleAm)
+        woodResources.setText(""+ AppUtils.gold)
+        villagersA.setText("" + AppUtils.villagers)
+        scientistA.setText("" + AppUtils.scientists)
+        minersA.setText("" + AppUtils.miners)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

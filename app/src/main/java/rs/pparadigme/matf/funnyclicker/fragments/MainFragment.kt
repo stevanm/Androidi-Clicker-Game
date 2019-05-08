@@ -35,27 +35,62 @@ class MainFragment : Fragment(){
 
         /* TODO: Add onClick playgame logics */
         foodPlus.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "Food '+' clicked", Toast.LENGTH_SHORT).show()
+            if(AppUtils.villagers + AppUtils.miners + AppUtils.scientists < AppUtils.peopleAm){
+                AppUtils.villagers++
+                Toast.makeText(context, "You have assigned one man to produce food", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "There are no idle people", Toast.LENGTH_SHORT).show()
+            }
         })
 
         foodMinus.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "Food '-' clicked", Toast.LENGTH_SHORT).show()
+            if(AppUtils.villagers > 0){
+                AppUtils.villagers--;
+                Toast.makeText(context, "One villager became idle", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "There are no villagers", Toast.LENGTH_SHORT).show()
+            }
         })
 
         sciencePlus.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "Science '+' clicked", Toast.LENGTH_SHORT).show()
-        })
+            if(AppUtils.villagers + AppUtils.miners + AppUtils.scientists < AppUtils.peopleAm){
+                AppUtils.scientists++
+                Toast.makeText(context, "You have assigned one man to produce science", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "There are no idle people", Toast.LENGTH_SHORT).show()
+            }})
 
         scienceMinus.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "Science '-' clicked", Toast.LENGTH_SHORT).show()
+            if(AppUtils.scientists > 0){
+                AppUtils.scientists--;
+                Toast.makeText(context, "One scientist became idle", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "There are no scientists", Toast.LENGTH_SHORT).show()
+            }
         })
 
         resourcePlus.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "Resource '+' clicked", Toast.LENGTH_SHORT).show()
+            if(AppUtils.villagers + AppUtils.miners + AppUtils.scientists < AppUtils.peopleAm){
+                AppUtils.miners++
+                Toast.makeText(context, "You have assigned one man to produce gold", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "There are no idle people", Toast.LENGTH_SHORT).show()
+            }
         })
 
         resourceMinus.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "Resource '-' clicked", Toast.LENGTH_SHORT).show()
+            if(AppUtils.miners > 0){
+                AppUtils.miners--;
+                Toast.makeText(context, "One miner became idle", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(context, "There are no miners", Toast.LENGTH_SHORT).show()
+            }
         })
 
     }

@@ -21,6 +21,7 @@ object AppUtils {
     var villagers = 0
     var scientists = 0
     var miners = 0
+    var gold = 0
 
     var villagersEff = 1.0
     var scientistsEff = 1.0
@@ -50,6 +51,7 @@ object AppUtils {
         villagers = 0
         scientists = 0
         miners = 0
+        gold = 0
 
         villagersEff = 1.0
         scientistsEff = 1.0

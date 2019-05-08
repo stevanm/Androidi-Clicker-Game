@@ -109,9 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun Calculate(){
-
-        AppUtils.villagers = AppUtils.peopleAm / 2
-        AppUtils.scientists = AppUtils.peopleAm / 2
+        AppUtils.gold += (AppUtils.miners * AppUtils.minersEff).toInt()
         AppUtils.foodPerSec = (AppUtils.villagers * AppUtils.villagersEff).toInt()
         if (AppUtils.foodAm + AppUtils.foodPerSec <= AppUtils.foodCap) {
             AppUtils.foodAm += AppUtils.foodPerSec
