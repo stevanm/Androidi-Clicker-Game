@@ -11,8 +11,7 @@ We will use Kotlin programming language for implementation.
 
 ## Game running
 
-1. Install Android Studio and setup enviroment
-Details: https://developer.android.com/studio/run
+1. Install Android Studio and setup enviroment (https://developer.android.com/studio/run)
 
 2. Choose one of the following two options
     1. Run the game on the Android Emulator (https://developer.android.com/studio/run/emulator)
