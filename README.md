@@ -7,6 +7,20 @@ The game should be available on Android mobile platform.
 
 We will use Kotlin programming language for implementation.
 
+## Gameplay
+
+## Game running
+
+1. Install Android Studio and setup enviroment
+Details: https://developer.android.com/studio/run
+
+2. Choose one of the following two options
+  2-1. Run the game on the Android Emulator
+  Details: https://developer.android.com/studio/run/emulator
+
+  2-2. Run the game on a hardware device
+  Details: https://developer.android.com/studio/run/device
+
 ## Team members
 Stevan Milic, stevanmilic@gmail.com
 
