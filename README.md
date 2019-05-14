@@ -15,11 +15,9 @@ We will use Kotlin programming language for implementation.
 Details: https://developer.android.com/studio/run
 
 2. Choose one of the following two options
-    1. Run the game on the Android Emulator
-    Details: https://developer.android.com/studio/run/emulator
+    1. Run the game on the Android Emulator (https://developer.android.com/studio/run/emulator)
 
-    2. Run the game on a hardware device
-    Details: https://developer.android.com/studio/run/device
+    2. Run the game on a hardware device (https://developer.android.com/studio/run/device)
 
 ## Team members
 Stevan Milic, stevanmilic@gmail.com
