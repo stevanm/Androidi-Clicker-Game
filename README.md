@@ -7,6 +7,20 @@ The game should be available on Android mobile platform.
 
 We will use Kotlin programming language for implementation.
 
+## Gameplay
+
+Player collect food and science in order to acquire gold. In order to get gold player need to research specific technologies and to have miners. There are multiple technologies and upgrades which helps by providing different benefits, as improving workers efficiency, increasing storage capacity, improve resource gain on click, lowering the cost of certain upgrades..
+Player starts with no resources. He needs to manually produce some, in order to purchase workers which can make other resources in time. Since cost of upgrades increases fast, player needs to spend acquired resources wisely, to progress fast. Once he reached certain level, player can start form the scratch but this time it will be easier for him to progress. Every restart at certain level provides speedup of next time.
+
+## Game running
+
+1. Install Android Studio and setup enviroment (https://developer.android.com/studio/run)
+
+2. Choose one of the following two options:
+    1. Run the game on the Android Emulator (https://developer.android.com/studio/run/emulator)
+
+    2. Run the game on a hardware device (https://developer.android.com/studio/run/device)
+
 ## Team members
 Stevan Milic, stevanmilic@gmail.com
 
