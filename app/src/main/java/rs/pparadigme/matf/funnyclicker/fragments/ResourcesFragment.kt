@@ -37,6 +37,7 @@ class ResourcesFragment : Fragment(){
         villagersA.setText("" + AppUtils.villagers)
         scientistA.setText("" + AppUtils.scientists)
         minersA.setText("" + AppUtils.miners)
+        goldGoal.setText("" + AppUtils.goldGoal)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

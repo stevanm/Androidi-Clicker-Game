@@ -99,8 +99,8 @@ class UpgradesFragment : Fragment(){
                             .show()
                     }
                 }
-                if (selected == 3) AppUtils.foodCl++
-                if (selected == 4) AppUtils.scienceCl++
+                if (selected == 3) AppUtils.scienceCl++
+                if (selected == 4) AppUtils.foodCl++
 
                 if (selected == 5) {
                     if (AppUtils.scienceResearched[4] > 0) {
@@ -117,7 +117,7 @@ class UpgradesFragment : Fragment(){
 
                 if (available) {
                     AppUtils.foodAm -= AppUtils.upgradeCosts[selected]
-                    AppUtils.upgradeCosts[selected] = (AppUtils.upgradeCosts[selected] * 1.5).toInt()
+                    AppUtils.upgradeCosts[selected] = (AppUtils.upgradeCosts[selected] * AppUtils.costCoef).toInt()
 
                     textUpgradeValue.setText(" " + AppUtils.upgradeCosts[selected])
 

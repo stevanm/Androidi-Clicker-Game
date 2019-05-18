@@ -45,10 +45,10 @@ class ScienceFragment : Fragment(){
             wheelLeft.setImageResource(R.drawable.ic_green_left)
             wheelRight.setImageResource(R.drawable.ic_green_right)
         }
-        if(AppUtils.scienceResearched[6] > 0) {
+        if(AppUtils.scienceResearched[4] > 0) {
             housingBot.setImageResource(R.drawable.ic_green)
         }
-        if(AppUtils.scienceResearched[7] > 0) {
+        if(AppUtils.scienceResearched[5] > 0) {
             toolsBot.setImageResource(R.drawable.ic_green)
         }
     }

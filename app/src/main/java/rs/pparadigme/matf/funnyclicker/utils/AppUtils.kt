@@ -30,12 +30,24 @@ object AppUtils {
     var foodCl:Int = 1
     var scienceCl = 1
 
+    var costCoef = 1.5
+    var goldGoal = 100
     var globalCounter:Int = 0
 
     var upgradeCosts = ArrayList<Int>()
     var scienceResearched = ArrayList<Int>(Collections.nCopies(8, 0))
     /* resart all app data */
     fun restartAppData(){
+        if(gold > goldGoal){
+            if(costCoef > 1.3) {
+                costCoef -= 0.05
+                goldGoal *= 3
+            }
+            else {
+                goldGoal = goldGoal + goldGoal / 2
+                costCoef -=0.005
+            }
+        }
 
         foodAm = 0
         foodCap = 50
