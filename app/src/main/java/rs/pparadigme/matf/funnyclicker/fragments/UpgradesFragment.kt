@@ -77,11 +77,20 @@ class UpgradesFragment : Fragment(){
                     Toast.LENGTH_SHORT
                 )
                 var available = true
-                if (selected == 0) AppUtils.peopleAm++
+                if (selected == 0) {
+                    if(AppUtils.peopleCap > AppUtils.peopleAm){
+                        AppUtils.peopleAm++
+                    }
+                    else{
+                        available = false
+                        Toast.makeText(activity!!.applicationContext, "Build more houses for people", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
                 if (selected == 1) {
                     //wheel
                     if (AppUtils.scienceResearched[2] > 0) {
-                        AppUtils.upgradeCosts[0] = ((AppUtils.upgradeCosts[2] + 1) / 1.2).toInt()
+                        AppUtils.upgradeCosts[0] = ((AppUtils.upgradeCosts[0] + 1) / 1.2).toInt()
                         AppUtils.upgradeCosts[2] = ((AppUtils.upgradeCosts[2] + 1) / 1.2).toInt()
                     } else {
                         available = false
